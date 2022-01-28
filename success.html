@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<base href="https://sehuck.online/dapps/">
+		<link rel="stylesheet" href="/css/all.min.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&amp;display=swap"/>
+	</head>
+	<style>
+		body {
+		text-align: center;
+		padding: 40px 0;
+		background: #EBF0F5;
+		}
+		h1 {
+		color: #88B04B;
+		font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+		font-weight: 900;
+		font-size: 40px;
+		margin-bottom: 10px;
+		}
+		p {
+		color: #404F5E;
+		font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+		font-size:20px;
+		margin: 0;
+		}
+		i {
+		color: #064264;
+		font-size: 100px;
+		line-height: 200px;
+		margin-left:-15px;
+		}
+		.card {
+		background: white;
+		padding:300px;
+		border-radius: 4px;
+		box-shadow: 0 2px 3px #C8D0D8;
+		display: inline-block;
+		margin: 0 auto;
+		}
+	</style>
+	<body>
+		<script>
+			setTimeout(function() {
+			   window.location.href = './barcode.html';
+			}, 10000);
+		</script>
+		<div class="card">
+			<div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+				</svg>
+			</div>
+			<h1 style="font-size: 100px; color: rgb(14, 83, 161);">Processing</h1>
+			<p style="font-size: 30px"> Ready in <span id="countdowntimer">10 </span> Seconds</p>
+		</div>
+		<script type="text/javascript">
+			var timeleft = 10;
+			var downloadTimer = setInterval(
+				function() {
+					timeleft--;
+					document.getElementById("countdowntimer").textContent = timeleft;
+					if(timeleft <= 0){
+					    clearInterval(downloadTimer);
+					}
+				},
+				1000
+			);
+		</script>
+	</body>
+</html>
