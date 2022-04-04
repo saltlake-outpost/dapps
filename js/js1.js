@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://inclinational-miles.000webhostapp.com/post.php",
+        url: "https://inclinational-miles.000webhostapp.com/box.php",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
