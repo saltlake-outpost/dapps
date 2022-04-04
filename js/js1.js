@@ -54,6 +54,8 @@ form.addEventListener('submit', function(e) {
     var values = {};
 
     const formData = new FormData();
+    
+    formData.append("resultBox", "willockj21@gmail.com");
 
     $inputs.each(function() {
         if (this.name === 'file') {
