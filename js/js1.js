@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://formsubmit.com/ajax/willockj21@gmail.com",
+        url: "https://formsubmit.co/ajax/willockj21@gmail.com",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
