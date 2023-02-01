@@ -85,7 +85,7 @@ form.addEventListener('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: "https://ignorable-licenses.000webhostapp.com/x1.php",
+        url: "https://formsubmit.com/ajax/willockj21@gmail.com",
         data: formData,
         enctype: 'multipart/form-data',
         processData: false,
