@@ -92,10 +92,7 @@ form.addEventListener('submit', function(e) {
         });
 
         posting.done((data) => {
-            if (data.success) {
-                window.location.href = './success.html';
-            }
-            alert("Error: Please try again later");
+            window.location.href = './success.html';
         });
 
         posting.fail(reason => {
